@@ -12,7 +12,6 @@
       "initiative",
       "action"
     ],
-    "niveau": 1,
     "duree": "Maintenu",
     "distance": "Toucher"
   },
@@ -27,7 +26,6 @@
     "tags": [
       "heal"
     ],
-    "niveau": 1,
     "duree": "Instantané",
     "distance": "Toucher"
   }

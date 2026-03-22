@@ -22,10 +22,6 @@
               <span class="label">Category:</span>
               <span class="value text-neon-lime">{{ spellStore.currentSpell.value.categorie }}</span>
             </div>
-            <div v-if="spellStore.currentSpell.value.niveau" class="badge">
-              <span class="label">Level:</span>
-              <span class="value">{{ spellStore.currentSpell.value.niveau }}</span>
-            </div>
           </div>
         </div>
       </div>
@@ -66,7 +62,7 @@
 
         <!-- Tags -->
         <div v-if="spellStore.currentSpell.value.tags && spellStore.currentSpell.value.tags.length > 0" class="field">
-          <h2 class="field-label text-street-gray mb-2">Tags</h2>
+          <h2 class="field-label text-secondary mb-2">Tags</h2>
           <div class="flex flex-wrap gap-2">
             <span v-for="tag in spellStore.currentSpell.value.tags" :key="tag" class="tag">
               {{ tag }}
@@ -77,7 +73,7 @@
     </div>
 
     <!-- Empty state -->
-    <div v-else class="flex items-center justify-center flex-1 text-street-gray">
+    <div v-else class="flex items-center justify-center flex-1 text-secondary">
       <div class="text-center">
         <p class="text-xl mb-2">No spell selected</p>
         <p class="text-sm">Use the list on the left to select a spell</p>
@@ -85,7 +81,7 @@
     </div>
 
     <!-- Footer info -->
-    <div class="spell-footer bg-shadow-dark border-t border-street-gray px-6 py-3 text-xs text-street-gray">
+    <div class="spell-footer bg-shadow-dark border-t border-street-gray px-6 py-3 text-xs text-secondary">
       <p>Press / to search • Arrow keys to navigate • Ctrl+P to print • Esc to clear</p>
     </div>
   </div>
@@ -121,7 +117,8 @@ import { spellStore } from '@/stores/spellStore'
 }
 
 .label {
-  color: var(--color-street-gray);
+  color: var(--color-corp-white);
+  opacity: 0.72;
   font-weight: 600;
 }
 

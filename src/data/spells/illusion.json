@@ -11,7 +11,6 @@
       "illusion",
       "zone"
     ],
-    "niveau": 1,
     "duree": "Maintenu",
     "distance": "Ligne de vue"
   },
@@ -27,7 +26,6 @@
       "illusion",
       "debuff"
     ],
-    "niveau": 1,
     "duree": "Maintenu",
     "distance": "Aire d'effet"
   },
@@ -43,7 +41,6 @@
       "illusion",
       "scene"
     ],
-    "niveau": 1,
     "duree": "Maintenu",
     "distance": "Aire d'effet"
   },
@@ -59,7 +56,6 @@
       "illusion",
       "stealth"
     ],
-    "niveau": 1,
     "duree": "Maintenu",
     "distance": "Toucher"
   },
@@ -75,7 +71,6 @@
       "illusion",
       "disguise"
     ],
-    "niveau": 1,
     "duree": "Maintenu",
     "distance": "Toucher"
   },
@@ -91,7 +86,6 @@
       "illusion",
       "sound"
     ],
-    "niveau": 1,
     "duree": "Maintenu",
     "distance": "Toucher"
   }

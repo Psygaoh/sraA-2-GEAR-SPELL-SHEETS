@@ -7,7 +7,7 @@
           <h1 class="text-xl font-bold text-neon-cyan text-glitch">
             🔮 Spells
           </h1>
-          <p class="text-xs text-street-gray mt-1">Shadowrun Anarchy</p>
+          <p class="text-secondary text-xs mt-1">Shadowrun Anarchy</p>
         </div>
         <button
           type="button"

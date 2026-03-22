@@ -11,7 +11,6 @@
       "direct",
       "damage"
     ],
-    "niveau": 1,
     "duree": "Instantané",
     "distance": "Ligne de vue"
   },
@@ -27,7 +26,6 @@
       "direct",
       "stun"
     ],
-    "niveau": 1,
     "duree": "Instantané",
     "distance": "Ligne de vue"
   },
@@ -44,7 +42,6 @@
       "damage",
       "knockdown"
     ],
-    "niveau": 1,
     "duree": "Instantané",
     "distance": "Ligne de vue"
   },
@@ -61,7 +58,6 @@
       "damage",
       "fire"
     ],
-    "niveau": 1,
     "duree": "Instantané",
     "distance": "Ligne de vue"
   },
@@ -78,7 +74,6 @@
       "damage",
       "slow"
     ],
-    "niveau": 1,
     "duree": "Instantané",
     "distance": "Ligne de vue"
   },
@@ -95,7 +90,6 @@
       "damage",
       "stun"
     ],
-    "niveau": 1,
     "duree": "Instantané",
     "distance": "Ligne de vue"
   },
@@ -112,7 +106,6 @@
       "damage",
       "acid"
     ],
-    "niveau": 1,
     "duree": "Instantané",
     "distance": "Ligne de vue"
   }

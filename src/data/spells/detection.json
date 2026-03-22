@@ -11,7 +11,6 @@
       "analyse",
       "magic"
     ],
-    "niveau": 1,
     "duree": "Instantané",
     "distance": "Ligne de vue"
   },
@@ -27,7 +26,6 @@
       "analyse",
       "verite"
     ],
-    "niveau": 1,
     "duree": "Maintenu",
     "distance": "Ligne de vue"
   },
@@ -43,7 +41,6 @@
       "sense",
       "magic"
     ],
-    "niveau": 1,
     "duree": "Maintenu",
     "distance": "Selon succès"
   },
@@ -59,7 +56,6 @@
       "sense",
       "life"
     ],
-    "niveau": 1,
     "duree": "Maintenu",
     "distance": "Selon succès"
   },
@@ -75,7 +71,6 @@
       "sense",
       "enemy"
     ],
-    "niveau": 1,
     "duree": "Maintenu",
     "distance": "Selon succès"
   },
@@ -91,7 +86,6 @@
       "sense",
       "link"
     ],
-    "niveau": 1,
     "duree": "Maintenu",
     "distance": "Ligne de vue"
   },
@@ -108,7 +102,6 @@
       "combat",
       "bonus"
     ],
-    "niveau": 1,
     "duree": "Maintenu",
     "distance": "Personnel"
   },
@@ -124,7 +117,6 @@
       "analyse",
       "mind"
     ],
-    "niveau": 1,
     "duree": "Instantané",
     "distance": "Toucher"
   }

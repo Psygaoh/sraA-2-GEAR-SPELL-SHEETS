@@ -19,7 +19,7 @@
     
     <!-- Empty state -->
     <div v-if="spellStore.filteredSpells.value.length === 0" class="empty-state p-4">
-      <p class="text-street-gray text-sm">No spells found</p>
+      <p class="text-secondary text-sm">No spells found</p>
     </div>
   </div>
 </template>
@@ -76,7 +76,8 @@ const selectSpell = (id) => {
 
 .spell-type {
   font-size: 0.75rem;
-  color: var(--color-street-gray);
+  color: var(--color-corp-white);
+  opacity: 0.72;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;

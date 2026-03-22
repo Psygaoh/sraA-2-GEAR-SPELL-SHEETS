@@ -79,6 +79,11 @@
   text-shadow: 2px 0 var(--color-neon-cyan);
 }
 
+@utility text-secondary {
+  color: var(--color-corp-white);
+  opacity: 0.72;
+}
+
 @utility bg-dark-panel {
   @apply bg-shadow-dark border border-street-gray rounded;
 }

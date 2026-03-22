@@ -11,7 +11,6 @@
       "mental",
       "controle"
     ],
-    "niveau": 1,
     "duree": "Maintenu",
     "distance": "Ligne de vue"
   },
@@ -27,7 +26,6 @@
       "buff",
       "armor"
     ],
-    "niveau": 1,
     "duree": "Maintenu",
     "distance": "Toucher"
   },
@@ -44,7 +42,6 @@
       "armor",
       "astral"
     ],
-    "niveau": 1,
     "duree": "Maintenu",
     "distance": "Toucher"
   },
@@ -61,7 +58,6 @@
       "armor",
       "magic"
     ],
-    "niveau": 1,
     "duree": "Maintenu",
     "distance": "Toucher"
   },
@@ -77,7 +73,6 @@
       "damage",
       "aura"
     ],
-    "niveau": 1,
     "duree": "Maintenu",
     "distance": "Toucher"
   },
@@ -92,7 +87,6 @@
     "tags": [
       "barrier"
     ],
-    "niveau": 1,
     "duree": "Maintenu",
     "distance": "Ligne de vue"
   },
@@ -108,7 +102,6 @@
       "barrier",
       "astral"
     ],
-    "niveau": 1,
     "duree": "Maintenu",
     "distance": "Ligne de vue"
   },
@@ -124,7 +117,6 @@
       "barrier",
       "dual"
     ],
-    "niveau": 1,
     "duree": "Maintenu",
     "distance": "Ligne de vue"
   },
@@ -139,7 +131,6 @@
     "tags": [
       "telekinesis"
     ],
-    "niveau": 1,
     "duree": "Maintenu",
     "distance": "Ligne de vue"
   },
@@ -154,7 +145,6 @@
     "tags": [
       "shape"
     ],
-    "niveau": 1,
     "duree": "Maintenu",
     "distance": "Toucher"
   },
@@ -170,7 +160,6 @@
       "move",
       "gravity"
     ],
-    "niveau": 1,
     "duree": "Maintenu",
     "distance": "Ligne de vue"
   }

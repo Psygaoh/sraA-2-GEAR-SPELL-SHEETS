@@ -18,7 +18,7 @@
       </div>
       
       <!-- Results count -->
-      <div v-if="spellStore.filters.search" class="text-xs text-street-gray">
+      <div v-if="spellStore.filters.search" class="text-xs text-secondary">
         {{ spellStore.filteredSpells.value.length }} spell(s) found
       </div>
     </div>
