@@ -1,0 +1,93 @@
+[
+  {
+    "id": "eclairMana",
+    "nom": "Éclair mana",
+    "type": "Combat (direct, I)",
+    "seuil": "Selon aire d'effet",
+    "effet": "Inflige des dommages létaux",
+    "notes": "Si l'attaque est réussie, les dommages sont appliqués : VD (Succès nets) dommages létaux",
+    "categorie": "combat",
+    "tags": ["direct", "damage"],
+    "niveau": 1,
+    "duree": "Instantané",
+    "distance": "Ligne de vue"
+  },
+  {
+    "id": "eclairEtourdissant",
+    "nom": "Éclair étourdissant",
+    "type": "Combat (direct, I)",
+    "seuil": "Selon aire d'effet",
+    "effet": "Inflige des dommages étourdissants",
+    "notes": "Si l'attaque est réussie, les dommages sont appliqués : VD (Succès nets) dommages étourdissants",
+    "categorie": "combat",
+    "tags": ["direct", "stun"],
+    "niveau": 1,
+    "duree": "Instantané",
+    "distance": "Ligne de vue"
+  },
+  {
+    "id": "deflagration",
+    "nom": "Déflagration",
+    "type": "Combat (indirect, I)",
+    "seuil": "Athlétisme (défense à distance) + Agilité ou Combat rapproché + Agilité + selon aire d'effet",
+    "effet": "Dommages physiques et projette la cible au sol",
+    "notes": "Si l'attaque est réussie : VD (Volonté + Succès nets) dommages physiques. Effet spécial : projette la cible au sol",
+    "categorie": "combat",
+    "tags": ["indirect", "damage", "knockdown"],
+    "niveau": 1,
+    "duree": "Instantané",
+    "distance": "Ligne de vue"
+  },
+  {
+    "id": "traitDeFeu",
+    "nom": "Trait de feu",
+    "type": "Combat (indirect, I)",
+    "seuil": "Athlétisme (défense à distance) + Agilité ou Combat rapproché + Agilité + selon aire d'effet",
+    "effet": "Dommages physiques et enflamme la cible",
+    "notes": "Si l'attaque est réussie : VD (Volonté + Succès nets) dommages physiques. Effet spécial : enflamme la cible",
+    "categorie": "combat",
+    "tags": ["indirect", "damage", "fire"],
+    "niveau": 1,
+    "duree": "Instantané",
+    "distance": "Ligne de vue"
+  },
+  {
+    "id": "lanceDeGlace",
+    "nom": "Lance de glace",
+    "type": "Combat (indirect, I)",
+    "seuil": "Athlétisme (défense à distance) + Agilité ou Combat rapproché + Agilité + selon aire d'effet",
+    "effet": "Dommages physiques et ralentit la cible",
+    "notes": "Si l'attaque est réussie : VD (Volonté + Succès nets) dommages physiques. Effet spécial : ralentit la cible",
+    "categorie": "combat",
+    "tags": ["indirect", "damage", "slow"],
+    "niveau": 1,
+    "duree": "Instantané",
+    "distance": "Ligne de vue"
+  },
+  {
+    "id": "foudre",
+    "nom": "Foudre",
+    "type": "Combat (indirect, I)",
+    "seuil": "Athlétisme (défense à distance) + Agilité ou Combat rapproché + Agilité + selon aire d'effet",
+    "effet": "Dommages physiques et fait perdre une action",
+    "notes": "Si l'attaque est réussie : VD (Volonté + Succès nets) dommages physiques. Effet spécial : fait perdre une action",
+    "categorie": "combat",
+    "tags": ["indirect", "damage", "stun"],
+    "niveau": 1,
+    "duree": "Instantané",
+    "distance": "Ligne de vue"
+  },
+  {
+    "id": "flotAcide",
+    "nom": "Flot acide",
+    "type": "Combat (indirect, I)",
+    "seuil": "Athlétisme (défense à distance) + Agilité ou Combat rapproché + Agilité + selon aire d'effet",
+    "effet": "Dommages physiques et détruit l’armure",
+    "notes": "Si l'attaque est réussie : VD (Volonté + Succès nets) dommages physiques. Effet spécial : détruit l’armure de la cible",
+    "categorie": "combat",
+    "tags": ["indirect", "damage", "acid"],
+    "niveau": 1,
+    "duree": "Instantané",
+    "distance": "Ligne de vue"
+  }
+]

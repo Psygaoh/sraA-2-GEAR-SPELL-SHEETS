@@ -1,0 +1,150 @@
+[
+  {
+    "id": "controlePensees",
+    "nom": "Contrôle des pensées",
+    "type": "Manipulation (mentale, M)",
+    "seuil": "Selon aire d'effet",
+    "effet": "Implante une suggestion mentale",
+    "notes": "Résistance Volonté + Logique, désavantage aux tests sociaux",
+    "categorie": "manipulation",
+    "tags": ["mental", "controle"],
+    "niveau": 1,
+    "duree": "Maintenu",
+    "distance": "Ligne de vue"
+  },
+
+  {
+    "id": "armure",
+    "nom": "Armure",
+    "type": "Manipulation (physique, M)",
+    "seuil": "0",
+    "effet": "Augmente l’armure contre attaques physiques",
+    "notes": "+1 armure par 3 succès",
+    "categorie": "manipulation",
+    "tags": ["buff", "armor"],
+    "niveau": 1,
+    "duree": "Maintenu",
+    "distance": "Toucher"
+  },
+  {
+    "id": "armureAstrale",
+    "nom": "Armure astrale",
+    "type": "Manipulation (physique, M)",
+    "seuil": "0",
+    "effet": "Augmente l’armure contre attaques magiques",
+    "notes": "+1 armure par 3 succès",
+    "categorie": "manipulation",
+    "tags": ["buff", "armor", "astral"],
+    "niveau": 1,
+    "duree": "Maintenu",
+    "distance": "Toucher"
+  },
+  {
+    "id": "armureMystique",
+    "nom": "Armure mystique",
+    "type": "Manipulation (physique, M)",
+    "seuil": "0",
+    "effet": "Augmente armure physique et magique",
+    "notes": "+1 armure par 4 succès",
+    "categorie": "manipulation",
+    "tags": ["buff", "armor", "magic"],
+    "niveau": 1,
+    "duree": "Maintenu",
+    "distance": "Toucher"
+  },
+  {
+    "id": "auraElementaire",
+    "nom": "Aura élémentaire",
+    "type": "Manipulation (physique, M)",
+    "seuil": "0",
+    "effet": "Inflige des dégâts à ceux qui touchent la cible",
+    "notes": "VD = succès",
+    "categorie": "manipulation",
+    "tags": ["damage", "aura"],
+    "niveau": 1,
+    "duree": "Maintenu",
+    "distance": "Toucher"
+  },
+
+  {
+    "id": "barrierePhysique",
+    "nom": "Barrière physique",
+    "type": "Manipulation (physique, M)",
+    "seuil": "0",
+    "effet": "Crée une barrière physique",
+    "notes": "Succès pour taille ou résistance",
+    "categorie": "manipulation",
+    "tags": ["barrier"],
+    "niveau": 1,
+    "duree": "Maintenu",
+    "distance": "Ligne de vue"
+  },
+  {
+    "id": "barriereAstrale",
+    "nom": "Barrière astrale",
+    "type": "Manipulation (physique, M)",
+    "seuil": "0",
+    "effet": "Crée une barrière astrale",
+    "notes": "Succès pour taille ou résistance",
+    "categorie": "manipulation",
+    "tags": ["barrier", "astral"],
+    "niveau": 1,
+    "duree": "Maintenu",
+    "distance": "Ligne de vue"
+  },
+  {
+    "id": "barriereDuale",
+    "nom": "Barrière duale",
+    "type": "Manipulation (physique, M)",
+    "seuil": "2",
+    "effet": "Crée une barrière physique et astrale",
+    "notes": "Succès pour taille ou résistance",
+    "categorie": "manipulation",
+    "tags": ["barrier", "dual"],
+    "niveau": 1,
+    "duree": "Maintenu",
+    "distance": "Ligne de vue"
+  },
+
+  {
+    "id": "doigtsTelekinetiques",
+    "nom": "Doigts télékinétiques",
+    "type": "Manipulation (physique, M)",
+    "seuil": "3",
+    "effet": "Manipulation simple à distance",
+    "notes": "Force = succès alloués",
+    "categorie": "manipulation",
+    "tags": ["telekinesis"],
+    "niveau": 1,
+    "duree": "Maintenu",
+    "distance": "Ligne de vue"
+  },
+
+  {
+    "id": "faconnage",
+    "nom": "Façonnage",
+    "type": "Manipulation (physique, M)",
+    "seuil": "Selon matériau et aire d'effet",
+    "effet": "Change la forme d’un matériau",
+    "notes": "2 naturel, 4 simple, 6 haute technologie",
+    "categorie": "manipulation",
+    "tags": ["shape"],
+    "niveau": 1,
+    "duree": "Maintenu",
+    "distance": "Toucher"
+  },
+
+  {
+    "id": "levitation",
+    "nom": "Lévitation",
+    "type": "Manipulation (physique, M)",
+    "seuil": "Selon taille",
+    "effet": "Fait léviter et déplacer la cible",
+    "notes": "0 métahumain, 1 voiture, 2 bus",
+    "categorie": "manipulation",
+    "tags": ["move", "gravity"],
+    "niveau": 1,
+    "duree": "Maintenu",
+    "distance": "Ligne de vue"
+  }
+]
