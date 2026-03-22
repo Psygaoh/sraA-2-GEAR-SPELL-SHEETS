@@ -1,7 +1,7 @@
 <template>
   <div class="spell-detail flex-1 flex flex-col bg-shadow-black overflow-hidden">
     <!-- Header -->
-    <div v-if="spellStore.currentSpell" class="spell-header bg-gradient-to-r from-shadow-dark to-shadow-black border-b border-neon-cyan p-6">
+    <div v-if="spellStore.currentSpell.value" class="spell-header bg-gradient-to-r from-shadow-dark to-shadow-black border-b border-neon-cyan p-6">
       <div class="flex items-start gap-6">
         <!-- Icon placeholder -->
         <div class="spell-icon bg-shadow-dark border-2 border-neon-cyan rounded flex items-center justify-center flex-shrink-0">
@@ -11,20 +11,20 @@
         <!-- Title section -->
         <div class="flex-1">
           <h1 class="text-3xl font-bold text-neon-cyan mb-2 text-glitch">
-            {{ spellStore.currentSpell.nom }}
+            {{ spellStore.currentSpell.value.nom }}
           </h1>
           <div class="flex flex-wrap gap-4 text-sm">
             <div class="badge">
               <span class="label">Type:</span>
-              <span class="value text-neon-magenta">{{ spellStore.currentSpell.type }}</span>
+              <span class="value text-neon-magenta">{{ spellStore.currentSpell.value.type }}</span>
             </div>
             <div class="badge">
               <span class="label">Category:</span>
-              <span class="value text-neon-lime">{{ spellStore.currentSpell.categorie }}</span>
+              <span class="value text-neon-lime">{{ spellStore.currentSpell.value.categorie }}</span>
             </div>
-            <div v-if="spellStore.currentSpell.niveau" class="badge">
+            <div v-if="spellStore.currentSpell.value.niveau" class="badge">
               <span class="label">Level:</span>
-              <span class="value">{{ spellStore.currentSpell.niveau }}</span>
+              <span class="value">{{ spellStore.currentSpell.value.niveau }}</span>
             </div>
           </div>
         </div>
@@ -32,43 +32,43 @@
     </div>
 
     <!-- Content -->
-    <div v-if="spellStore.currentSpell" class="spell-content flex-1 overflow-y-auto p-6">
+    <div v-if="spellStore.currentSpell.value" class="spell-content flex-1 overflow-y-auto p-6">
       <div class="space-y-6">
         <!-- Threshold/Seuil -->
         <div class="field">
           <h2 class="field-label text-neon-magenta">Seuil / Réserve Opposée</h2>
-          <p class="field-value">{{ spellStore.currentSpell.seuil }}</p>
+          <p class="field-value">{{ spellStore.currentSpell.value.seuil }}</p>
         </div>
 
         <!-- Effect -->
         <div class="field">
           <h2 class="field-label text-neon-lime">Effet</h2>
-          <p class="field-value">{{ spellStore.currentSpell.effet }}</p>
+          <p class="field-value">{{ spellStore.currentSpell.value.effet }}</p>
         </div>
 
         <!-- Duration -->
-        <div v-if="spellStore.currentSpell.duree" class="field">
+        <div v-if="spellStore.currentSpell.value.duree" class="field">
           <h2 class="field-label text-neon-cyan">Durée</h2>
-          <p class="field-value">{{ spellStore.currentSpell.duree }}</p>
+          <p class="field-value">{{ spellStore.currentSpell.value.duree }}</p>
         </div>
 
         <!-- Distance -->
-        <div v-if="spellStore.currentSpell.distance" class="field">
+        <div v-if="spellStore.currentSpell.value.distance" class="field">
           <h2 class="field-label text-neon-cyan">Distance</h2>
-          <p class="field-value">{{ spellStore.currentSpell.distance }}</p>
+          <p class="field-value">{{ spellStore.currentSpell.value.distance }}</p>
         </div>
 
         <!-- Notes -->
-        <div v-if="spellStore.currentSpell.notes" class="field bg-shadow-dark border border-street-gray rounded p-4">
+        <div v-if="spellStore.currentSpell.value.notes" class="field bg-shadow-dark border border-street-gray rounded p-4">
           <h2 class="field-label text-neon-magenta mb-2">Notes</h2>
-          <p class="field-value text-sm leading-relaxed">{{ spellStore.currentSpell.notes }}</p>
+          <p class="field-value text-sm leading-relaxed">{{ spellStore.currentSpell.value.notes }}</p>
         </div>
 
         <!-- Tags -->
-        <div v-if="spellStore.currentSpell.tags && spellStore.currentSpell.tags.length > 0" class="field">
+        <div v-if="spellStore.currentSpell.value.tags && spellStore.currentSpell.value.tags.length > 0" class="field">
           <h2 class="field-label text-street-gray mb-2">Tags</h2>
           <div class="flex flex-wrap gap-2">
-            <span v-for="tag in spellStore.currentSpell.tags" :key="tag" class="tag">
+            <span v-for="tag in spellStore.currentSpell.value.tags" :key="tag" class="tag">
               {{ tag }}
             </span>
           </div>

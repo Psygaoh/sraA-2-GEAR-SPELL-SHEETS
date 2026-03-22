@@ -19,14 +19,13 @@
       
       <!-- Results count -->
       <div v-if="spellStore.filters.search" class="text-xs text-street-gray">
-        {{ spellStore.filteredSpells.length }} spell(s) found
+        {{ spellStore.filteredSpells.value.length }} spell(s) found
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
 import { spellStore } from '@/stores/spellStore'
 
 // Debounce search input
