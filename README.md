@@ -100,10 +100,8 @@ srA-2-gear-spell-sheets/
 │   │   │   ├── manipulation.json
 │   │   │   ├── illusion.json
 │   │   │   └── sante.json
-│   │   └── spells.json          # Flattened all-spells compatibility file
 │   └── styles/
 │       ├── main.css             # Tailwind imports + global styles
-│       └── custom-palette.css   # Cyberpunk color definitions
 ├── public/
 │   └── favicon.svg
 └── dist/                        # Production build output (generated)
@@ -129,11 +127,10 @@ srA-2-gear-spell-sheets/
 
 ### Spell JSON Schema
 
-Spells are stored in `src/data/spells.json` with the following structure:
+Spells are stored in category files under `src/data/spells/` and aggregated by `src/data/spells/index.js`:
 
 ```json
-{
-  "spells": [
+[
     {
       "id": "eclairManaEtourdissant",
       "nom": "Éclair mana / étourdissant",
@@ -148,7 +145,6 @@ Spells are stored in `src/data/spells.json` with the following structure:
       "distance": "Ligne de vue"
     }
   ]
-}
 ```
 
 ### Field Reference
@@ -356,7 +352,7 @@ npm run dev -- --port 3000
 ### Search not working
 
 - Check browser console for errors (F12)
-- Verify `spells.json` is valid JSON (use JSONLint)
+- Verify each `src/data/spells/*.json` file is valid JSON (use JSONLint)
 - Ensure spell names contain search query
 
 ### Build fails

@@ -34,13 +34,13 @@ const selectSpell = (id) => {
 
 <style scoped>
 .spell-list {
-  background-color: rgb(10, 14, 39);
-  border-right: 1px solid rgb(61, 70, 86);
+  background-color: var(--color-shadow-black);
+  border-right: 1px solid var(--color-street-gray);
 }
 
 .spell-list-item {
   padding: 12px 16px;
-  border-bottom: 1px solid rgba(61, 70, 86, 0.3);
+  border-bottom: 1px solid rgba(var(--color-neon-cyan-rgb), 0.14);
   cursor: pointer;
   transition: all 0.2s ease;
   display: flex;
@@ -48,15 +48,15 @@ const selectSpell = (id) => {
 }
 
 .spell-list-item:hover {
-  background-color: rgba(61, 70, 86, 0.3);
-  border-left: 3px solid rgb(0, 247, 255);
+  background-color: rgba(var(--color-neon-cyan-rgb), 0.1);
+  border-left: 3px solid var(--color-neon-cyan);
   padding-left: 13px;
 }
 
 .spell-list-item.active {
-  background: linear-gradient(90deg, rgba(0, 247, 255, 0.1) 0%, transparent 100%);
-  border-left: 4px solid rgb(0, 247, 255);
-  box-shadow: inset 0 0 10px rgba(0, 247, 255, 0.05);
+  background: linear-gradient(90deg, rgba(var(--color-neon-cyan-rgb), 0.18) 0%, transparent 100%);
+  border-left: 4px solid var(--color-neon-cyan);
+  box-shadow: inset 0 0 12px rgba(var(--color-neon-cyan-rgb), 0.16);
   padding-left: 12px;
 }
 
@@ -66,7 +66,7 @@ const selectSpell = (id) => {
 
 .spell-name {
   font-weight: 600;
-  color: rgb(232, 232, 232);
+  color: var(--color-corp-white);
   font-size: 0.95rem;
   margin-bottom: 4px;
   text-overflow: ellipsis;
@@ -76,19 +76,19 @@ const selectSpell = (id) => {
 
 .spell-type {
   font-size: 0.75rem;
-  color: rgb(61, 70, 86);
+  color: var(--color-street-gray);
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
 .spell-list-item.active .spell-name {
-  color: rgb(0, 247, 255);
-  text-shadow: 0 0 10px rgba(0, 247, 255, 0.3);
+  color: var(--color-neon-cyan);
+  text-shadow: 0 0 10px rgba(var(--color-neon-cyan-rgb), 0.4);
 }
 
 .spell-list-item.active .spell-type {
-  color: rgb(57, 255, 20);
+  color: var(--color-neon-lime);
 }
 
 .empty-state {

@@ -18,6 +18,30 @@
   --shadow-neon-lime: 0 0 10px rgb(57 255 20 / 0.5), 0 0 20px rgb(57 255 20 / 0.3);
 }
 
+:root {
+  --color-neon-cyan-rgb: 0, 247, 255;
+  --color-neon-magenta-rgb: 255, 0, 110;
+  --color-neon-lime-rgb: 57, 255, 20;
+}
+
+[data-theme='gold-pink'] {
+  --color-neon-cyan: #ffd166;
+  --color-neon-magenta: #ff4fd8;
+  --color-neon-lime: #f5b8ff;
+  --color-shadow-black: #080707;
+  --color-shadow-dark: #171111;
+  --color-street-gray: #5e4b31;
+  --color-corp-white: #fff4dd;
+
+  --color-neon-cyan-rgb: 255, 209, 102;
+  --color-neon-magenta-rgb: 255, 79, 216;
+  --color-neon-lime-rgb: 245, 184, 255;
+
+  --shadow-neon-cyan: 0 0 10px rgb(255 209 102 / 0.65), 0 0 22px rgb(255 209 102 / 0.45);
+  --shadow-neon-magenta: 0 0 10px rgb(255 79 216 / 0.65), 0 0 22px rgb(255 79 216 / 0.45);
+  --shadow-neon-lime: 0 0 10px rgb(245 184 255 / 0.6), 0 0 22px rgb(245 184 255 / 0.4);
+}
+
 @layer base {
   * {
     box-sizing: border-box;
@@ -27,6 +51,7 @@
     @apply bg-shadow-black text-corp-white font-sans;
     margin: 0;
     padding: 0;
+    transition: background-color 0.25s ease, color 0.25s ease;
   }
 
   html,
@@ -51,7 +76,7 @@
 
 @utility text-glitch {
   @apply text-neon-magenta font-bold;
-  text-shadow: 2px 0 #00f7ff;
+  text-shadow: 2px 0 var(--color-neon-cyan);
 }
 
 @utility bg-dark-panel {
@@ -67,7 +92,7 @@
   .sidebar {
     display: none;
   }
-  
+
   .spell-detail {
     max-width: 100%;
     page-break-inside: avoid;
