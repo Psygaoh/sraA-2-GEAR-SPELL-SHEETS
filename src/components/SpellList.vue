@@ -27,8 +27,11 @@
 <script setup>
 import { spellStore } from '@/stores/spellStore'
 
+const emit = defineEmits(['select-spell'])
+
 const selectSpell = (id) => {
   spellStore.selectSpell(id)
+  emit('select-spell', id)
 }
 </script>
 

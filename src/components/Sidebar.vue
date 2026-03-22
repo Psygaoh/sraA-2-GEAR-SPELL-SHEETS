@@ -5,16 +5,16 @@
       <div class="flex items-start justify-between gap-3">
         <div>
           <h1 class="text-xl font-bold text-neon-cyan text-glitch">
-            🔮 Spells
+            🔮 Grimoire
           </h1>
-          <p class="text-secondary text-xs mt-1">Shadowrun Anarchy</p>
         </div>
         <button
           type="button"
-          class="theme-toggle border border-neon-magenta text-neon-magenta"
-          @click="handleToggleTheme"
+          class="sidebar-close border border-neon-cyan text-neon-cyan"
+          @click="emit('close')"
+          aria-label="Close spell list"
         >
-          {{ currentTheme === 'gold-pink' ? 'Cyber Theme' : 'Gold Theme' }}
+          Close
         </button>
       </div>
     </div>
@@ -23,7 +23,7 @@
     <SearchBar />
 
     <!-- Spell List -->
-    <SpellList />
+    <SpellList @select-spell="handleSelectSpell" />
   </aside>
 </template>
 
@@ -31,17 +31,10 @@
 import SearchBar from '@/components/SearchBar.vue'
 import SpellList from '@/components/SpellList.vue'
 
-const { currentTheme } = defineProps({
-  currentTheme: {
-    type: String,
-    default: 'cyber',
-  },
-})
+const emit = defineEmits(['select-spell', 'close'])
 
-const emit = defineEmits(['toggle-theme'])
-
-const handleToggleTheme = () => {
-  emit('toggle-theme')
+const handleSelectSpell = (id) => {
+  emit('select-spell', id)
 }
 </script>
 
@@ -51,16 +44,18 @@ const handleToggleTheme = () => {
   display: flex;
   flex-direction: column;
   box-shadow: 2px 0 15px rgba(0, 0, 0, 0.5);
+  height: 100%;
 }
 
 .sidebar-header {
   flex-shrink: 0;
 }
 
-.theme-toggle {
-  background-color: rgba(var(--color-neon-magenta-rgb), 0.08);
+.sidebar-close {
+  background-color: rgba(var(--color-neon-cyan-rgb), 0.08);
   border-radius: 4px;
   cursor: pointer;
+  display: none;
   font-size: 0.7rem;
   font-weight: 600;
   padding: 6px 8px;
@@ -68,8 +63,16 @@ const handleToggleTheme = () => {
   white-space: nowrap;
 }
 
-.theme-toggle:hover {
-  background-color: rgba(var(--color-neon-magenta-rgb), 0.2);
-  box-shadow: 0 0 12px rgba(var(--color-neon-magenta-rgb), 0.45);
+.sidebar-close:hover {
+  background-color: rgba(var(--color-neon-cyan-rgb), 0.2);
+  box-shadow: 0 0 12px rgba(var(--color-neon-cyan-rgb), 0.45);
+}
+
+@media (max-width: 900px) {
+  .sidebar-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 </style>

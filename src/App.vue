@@ -8,6 +8,7 @@ const THEME_STORAGE_KEY = 'sra-theme'
 const DEFAULT_THEME = 'cyber'
 const ALT_THEME = 'gold-pink'
 const currentTheme = ref(DEFAULT_THEME)
+const isSidebarOpen = ref(false)
 
 const applyTheme = (theme) => {
   currentTheme.value = theme
@@ -18,6 +19,14 @@ const toggleTheme = () => {
   const nextTheme = currentTheme.value === DEFAULT_THEME ? ALT_THEME : DEFAULT_THEME
   applyTheme(nextTheme)
   localStorage.setItem(THEME_STORAGE_KEY, nextTheme)
+}
+
+const openSidebar = () => {
+  isSidebarOpen.value = true
+}
+
+const closeSidebar = () => {
+  isSidebarOpen.value = false
 }
 
 // Handle keyboard shortcuts globally
@@ -35,6 +44,7 @@ const handleKeyboardEvent = (event) => {
   // "Escape" key - clear search
   if (key === 'Escape') {
     spellStore.clearSearch()
+    closeSidebar()
   }
 
   // "ArrowUp" key - previous spell
@@ -70,12 +80,31 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="flex h-screen w-screen bg-shadow-black text-corp-white overflow-hidden">
-    <!-- Sidebar -->
-    <Sidebar :current-theme="currentTheme" @toggle-theme="toggleTheme" />
+  <div class="app-root">
+    <header class="app-topbar">
+      <button type="button" class="burger-button border border-neon-cyan text-neon-cyan" @click="isSidebarOpen ? closeSidebar() : openSidebar()" aria-label="Toggle spell list">
+        ☰
+      </button>
+      <div class="topbar-title">
+        <div class="topbar-title-main">SRA2 Companion</div>
+      </div>
+      <button
+        type="button"
+        class="theme-toggle border border-neon-magenta text-neon-magenta"
+        @click="toggleTheme"
+      >
+        {{ currentTheme === 'gold-pink' ? 'Cyber Theme' : 'Gold Theme' }}
+      </button>
+    </header>
+    <div class="app-shell flex bg-shadow-black text-corp-white overflow-hidden">
+      <div class="sidebar-drawer" :class="{ open: isSidebarOpen }">
+        <Sidebar @close="closeSidebar" />
+      </div>
+      <button type="button" class="drawer-overlay" :class="{ open: isSidebarOpen }" @click="closeSidebar" aria-label="Close spell list overlay"></button>
 
-    <!-- Main Detail Area -->
-    <SpellDetail />
+      <!-- Main Detail Area -->
+      <SpellDetail />
+    </div>
   </div>
 </template>
 
