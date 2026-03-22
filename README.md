@@ -93,7 +93,14 @@ srA-2-gear-spell-sheets/
 │   ├── stores/
 │   │   └── spellStore.js        # Reactive spell data, filters, methods
 │   ├── data/
-│   │   └── spells.json          # Master spell database (French)
+│   │   ├── spells/
+│   │   │   ├── index.js         # Aggregates per-category spell files
+│   │   │   ├── combat.json
+│   │   │   ├── detection.json
+│   │   │   ├── manipulation.json
+│   │   │   ├── illusion.json
+│   │   │   └── sante.json
+│   │   └── spells.json          # Flattened all-spells compatibility file
 │   └── styles/
 │       ├── main.css             # Tailwind imports + global styles
 │       └── custom-palette.css   # Cyberpunk color definitions
@@ -163,7 +170,8 @@ Spells are stored in `src/data/spells.json` with the following structure:
 
 ### Adding New Spells
 
-Edit `src/data/spells.json` and add a new object to the `spells` array. The app will hot-reload automatically during development.
+Edit the category file in `src/data/spells/` (`combat.json`, `detection.json`, `manipulation.json`, `illusion.json`, `sante.json`).  
+Each file is focused on one category so updates are easier to maintain. The app hot-reloads automatically during development.
 
 ---
 

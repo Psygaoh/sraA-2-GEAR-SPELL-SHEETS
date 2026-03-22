@@ -1,8 +1,7 @@
 import { ref, computed, reactive } from 'vue'
-import spellsData from '@/data/spells.json'
+import { allSpells } from '@/data/spells/index.js'
 
-// Ensure spells array is properly extracted
-const spellsArray = Array.isArray(spellsData) ? spellsData : (spellsData.spells || [])
+const spellsArray = Array.isArray(allSpells) ? allSpells : []
 
 // Reactive state
 const spells = ref(spellsArray)

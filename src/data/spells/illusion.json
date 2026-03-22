@@ -1,32 +1,5 @@
 [
   {
-    "id": "augmentationReflexes",
-    "nom": "Augmentation de réflexes",
-    "type": "Santé (M)",
-    "seuil": "Variable",
-    "effet": "Augmente l’initiative et les actions possibles",
-    "notes": "3 succès : +1 point d’Anarchy ; 5 succès : +1 action ; 7 succès : +2 points d’Anarchy",
-    "categorie": "sante",
-    "tags": ["buff", "initiative", "action"],
-    "niveau": 1,
-    "duree": "Maintenu",
-    "distance": "Toucher"
-  },
-  {
-    "id": "soins",
-    "nom": "Soins",
-    "type": "Santé (I)",
-    "seuil": "Variable",
-    "effet": "Soigne ou stabilise une blessure",
-    "notes": "Blessure légère 3, grave 5, incapacitante 6, stabilisation 3",
-    "categorie": "sante",
-    "tags": ["heal"],
-    "niveau": 1,
-    "duree": "Instantané",
-    "distance": "Toucher"
-  },
-
-  {
     "id": "chimere",
     "nom": "Chimère",
     "type": "Illusion (indirect, M)",
@@ -34,7 +7,10 @@
     "effet": "Crée une illusion multisensorielle à un emplacement",
     "notes": "Illusion indirecte",
     "categorie": "illusion",
-    "tags": ["illusion", "zone"],
+    "tags": [
+      "illusion",
+      "zone"
+    ],
     "niveau": 1,
     "duree": "Maintenu",
     "distance": "Ligne de vue"
@@ -47,7 +23,10 @@
     "effet": "Les cibles subissent un désavantage à leurs tests",
     "notes": "Résistance Volonté + Logique",
     "categorie": "illusion",
-    "tags": ["illusion", "debuff"],
+    "tags": [
+      "illusion",
+      "debuff"
+    ],
     "niveau": 1,
     "duree": "Maintenu",
     "distance": "Aire d'effet"
@@ -60,7 +39,10 @@
     "effet": "Les cibles perçoivent une scène multisensorielle réaliste",
     "notes": "Illusion directe",
     "categorie": "illusion",
-    "tags": ["illusion", "scene"],
+    "tags": [
+      "illusion",
+      "scene"
+    ],
     "niveau": 1,
     "duree": "Maintenu",
     "distance": "Aire d'effet"
@@ -73,7 +55,10 @@
     "effet": "La cible devient invisible",
     "notes": "Illusion indirecte",
     "categorie": "illusion",
-    "tags": ["illusion", "stealth"],
+    "tags": [
+      "illusion",
+      "stealth"
+    ],
     "niveau": 1,
     "duree": "Maintenu",
     "distance": "Toucher"
@@ -86,7 +71,10 @@
     "effet": "Change l’apparence de la cible",
     "notes": "La taille reste similaire",
     "categorie": "illusion",
-    "tags": ["illusion", "disguise"],
+    "tags": [
+      "illusion",
+      "disguise"
+    ],
     "niveau": 1,
     "duree": "Maintenu",
     "distance": "Toucher"
@@ -99,7 +87,10 @@
     "effet": "La cible devient inaudible",
     "notes": "Illusion indirecte",
     "categorie": "illusion",
-    "tags": ["illusion", "sound"],
+    "tags": [
+      "illusion",
+      "sound"
+    ],
     "niveau": 1,
     "duree": "Maintenu",
     "distance": "Toucher"
