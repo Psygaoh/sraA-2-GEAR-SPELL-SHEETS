@@ -97,17 +97,17 @@ import { spellStore } from '@/stores/spellStore'
 
 <style scoped>
 .spell-detail {
-  background: linear-gradient(135deg, rgb(10, 14, 39) 0%, rgb(26, 31, 58) 100%);
+  background: linear-gradient(135deg, var(--color-shadow-black) 0%, var(--color-shadow-dark) 100%);
 }
 
 .spell-header {
-  box-shadow: 0 0 20px rgba(0, 247, 255, 0.1);
+  box-shadow: 0 0 20px rgba(var(--color-neon-cyan-rgb), 0.2);
 }
 
 .spell-icon {
   width: 100px;
   height: 100px;
-  box-shadow: 0 0 15px rgba(0, 247, 255, 0.3);
+  box-shadow: 0 0 15px rgba(var(--color-neon-cyan-rgb), 0.35);
 }
 
 .badge {
@@ -115,13 +115,13 @@ import { spellStore } from '@/stores/spellStore'
   align-items: center;
   gap: 8px;
   padding: 6px 12px;
-  background-color: rgba(61, 70, 86, 0.3);
-  border: 1px solid rgba(61, 70, 86, 0.5);
+  background-color: rgba(var(--color-neon-cyan-rgb), 0.1);
+  border: 1px solid rgba(var(--color-neon-cyan-rgb), 0.26);
   border-radius: 4px;
 }
 
 .label {
-  color: rgb(150, 155, 170);
+  color: var(--color-street-gray);
   font-weight: 600;
 }
 
@@ -143,7 +143,7 @@ import { spellStore } from '@/stores/spellStore'
 }
 
 .field-value {
-  color: rgb(232, 232, 232);
+  color: var(--color-corp-white);
   line-height: 1.6;
   margin: 0;
 }
@@ -151,11 +151,11 @@ import { spellStore } from '@/stores/spellStore'
 .tag {
   display: inline-block;
   padding: 4px 12px;
-  background-color: rgba(0, 247, 255, 0.1);
-  border: 1px solid rgb(0, 247, 255);
+  background-color: rgba(var(--color-neon-cyan-rgb), 0.12);
+  border: 1px solid var(--color-neon-cyan);
   border-radius: 12px;
   font-size: 0.75rem;
-  color: rgb(0, 247, 255);
+  color: var(--color-neon-cyan);
 }
 
 .spell-footer {
