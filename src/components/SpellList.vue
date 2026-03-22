@@ -2,12 +2,12 @@
   <div class="spell-list flex-1 overflow-y-auto">
     <ul role="listbox" class="list-none p-0 m-0">
       <li
-        v-for="spell in spellStore.filteredSpells"
+        v-for="spell in spellStore.filteredSpells.value"
         :key="spell.id"
         role="option"
-        :aria-selected="spell.id === spellStore.currentSpellId"
+        :aria-selected="spell.id === spellStore.currentSpellId.value"
         class="spell-list-item"
-        :class="{ active: spell.id === spellStore.currentSpellId }"
+        :class="{ active: spell.id === spellStore.currentSpellId.value }"
         @click="selectSpell(spell.id)"
       >
         <div class="spell-item-content">
@@ -18,7 +18,7 @@
     </ul>
     
     <!-- Empty state -->
-    <div v-if="spellStore.filteredSpells.length === 0" class="empty-state p-4">
+    <div v-if="spellStore.filteredSpells.value.length === 0" class="empty-state p-4">
       <p class="text-street-gray text-sm">No spells found</p>
     </div>
   </div>

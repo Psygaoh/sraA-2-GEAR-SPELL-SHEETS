@@ -1,0 +1,34 @@
+[
+  {
+    "id": "augmentationReflexes",
+    "nom": "Augmentation de réflexes",
+    "type": "Santé (M)",
+    "seuil": "Variable",
+    "effet": "Augmente l’initiative et les actions possibles",
+    "notes": "3 succès : +1 point d’Anarchy ; 5 succès : +1 action ; 7 succès : +2 points d’Anarchy",
+    "categorie": "sante",
+    "tags": [
+      "buff",
+      "initiative",
+      "action"
+    ],
+    "niveau": 1,
+    "duree": "Maintenu",
+    "distance": "Toucher"
+  },
+  {
+    "id": "soins",
+    "nom": "Soins",
+    "type": "Santé (I)",
+    "seuil": "Variable",
+    "effet": "Soigne ou stabilise une blessure",
+    "notes": "Blessure légère 3, grave 5, incapacitante 6, stabilisation 3",
+    "categorie": "sante",
+    "tags": [
+      "heal"
+    ],
+    "niveau": 1,
+    "duree": "Instantané",
+    "distance": "Toucher"
+  }
+]

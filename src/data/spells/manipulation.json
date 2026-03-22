@@ -7,12 +7,14 @@
     "effet": "Implante une suggestion mentale",
     "notes": "Résistance Volonté + Logique, désavantage aux tests sociaux",
     "categorie": "manipulation",
-    "tags": ["mental", "controle"],
+    "tags": [
+      "mental",
+      "controle"
+    ],
     "niveau": 1,
     "duree": "Maintenu",
     "distance": "Ligne de vue"
   },
-
   {
     "id": "armure",
     "nom": "Armure",
@@ -21,7 +23,10 @@
     "effet": "Augmente l’armure contre attaques physiques",
     "notes": "+1 armure par 3 succès",
     "categorie": "manipulation",
-    "tags": ["buff", "armor"],
+    "tags": [
+      "buff",
+      "armor"
+    ],
     "niveau": 1,
     "duree": "Maintenu",
     "distance": "Toucher"
@@ -34,7 +39,11 @@
     "effet": "Augmente l’armure contre attaques magiques",
     "notes": "+1 armure par 3 succès",
     "categorie": "manipulation",
-    "tags": ["buff", "armor", "astral"],
+    "tags": [
+      "buff",
+      "armor",
+      "astral"
+    ],
     "niveau": 1,
     "duree": "Maintenu",
     "distance": "Toucher"
@@ -47,7 +56,11 @@
     "effet": "Augmente armure physique et magique",
     "notes": "+1 armure par 4 succès",
     "categorie": "manipulation",
-    "tags": ["buff", "armor", "magic"],
+    "tags": [
+      "buff",
+      "armor",
+      "magic"
+    ],
     "niveau": 1,
     "duree": "Maintenu",
     "distance": "Toucher"
@@ -60,12 +73,14 @@
     "effet": "Inflige des dégâts à ceux qui touchent la cible",
     "notes": "VD = succès",
     "categorie": "manipulation",
-    "tags": ["damage", "aura"],
+    "tags": [
+      "damage",
+      "aura"
+    ],
     "niveau": 1,
     "duree": "Maintenu",
     "distance": "Toucher"
   },
-
   {
     "id": "barrierePhysique",
     "nom": "Barrière physique",
@@ -74,7 +89,9 @@
     "effet": "Crée une barrière physique",
     "notes": "Succès pour taille ou résistance",
     "categorie": "manipulation",
-    "tags": ["barrier"],
+    "tags": [
+      "barrier"
+    ],
     "niveau": 1,
     "duree": "Maintenu",
     "distance": "Ligne de vue"
@@ -87,7 +104,10 @@
     "effet": "Crée une barrière astrale",
     "notes": "Succès pour taille ou résistance",
     "categorie": "manipulation",
-    "tags": ["barrier", "astral"],
+    "tags": [
+      "barrier",
+      "astral"
+    ],
     "niveau": 1,
     "duree": "Maintenu",
     "distance": "Ligne de vue"
@@ -100,12 +120,14 @@
     "effet": "Crée une barrière physique et astrale",
     "notes": "Succès pour taille ou résistance",
     "categorie": "manipulation",
-    "tags": ["barrier", "dual"],
+    "tags": [
+      "barrier",
+      "dual"
+    ],
     "niveau": 1,
     "duree": "Maintenu",
     "distance": "Ligne de vue"
   },
-
   {
     "id": "doigtsTelekinetiques",
     "nom": "Doigts télékinétiques",
@@ -114,12 +136,13 @@
     "effet": "Manipulation simple à distance",
     "notes": "Force = succès alloués",
     "categorie": "manipulation",
-    "tags": ["telekinesis"],
+    "tags": [
+      "telekinesis"
+    ],
     "niveau": 1,
     "duree": "Maintenu",
     "distance": "Ligne de vue"
   },
-
   {
     "id": "faconnage",
     "nom": "Façonnage",
@@ -128,12 +151,13 @@
     "effet": "Change la forme d’un matériau",
     "notes": "2 naturel, 4 simple, 6 haute technologie",
     "categorie": "manipulation",
-    "tags": ["shape"],
+    "tags": [
+      "shape"
+    ],
     "niveau": 1,
     "duree": "Maintenu",
     "distance": "Toucher"
   },
-
   {
     "id": "levitation",
     "nom": "Lévitation",
@@ -142,7 +166,10 @@
     "effet": "Fait léviter et déplacer la cible",
     "notes": "0 métahumain, 1 voiture, 2 bus",
     "categorie": "manipulation",
-    "tags": ["move", "gravity"],
+    "tags": [
+      "move",
+      "gravity"
+    ],
     "niveau": 1,
     "duree": "Maintenu",
     "distance": "Ligne de vue"
