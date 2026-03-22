@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon-cyan: #00f7ff;
+  --color-neon-magenta: #ff006e;
+  --color-neon-lime: #39ff14;
+  --color-shadow-black: #0a0e27;
+  --color-shadow-dark: #1a1f3a;
+  --color-street-gray: #3d4656;
+  --color-muted-purple: #6a0572;
+  --color-corp-white: #e8e8e8;
+
+  --font-sans: Inter, system-ui, sans-serif;
+  --font-mono: "Courier New", monospace;
+
+  --shadow-neon-cyan: 0 0 10px rgb(0 247 255 / 0.5), 0 0 20px rgb(0 247 255 / 0.3);
+  --shadow-neon-magenta: 0 0 10px rgb(255 0 110 / 0.5), 0 0 20px rgb(255 0 110 / 0.3);
+  --shadow-neon-lime: 0 0 10px rgb(57 255 20 / 0.5), 0 0 20px rgb(57 255 20 / 0.3);
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-shadow-black text-corp-white font-sans;
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body,
+  #app {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@utility neon-border-cyan {
+  @apply border border-neon-cyan shadow-neon-cyan;
+}
+
+@utility neon-border-magenta {
+  @apply border border-neon-magenta shadow-neon-magenta;
+}
+
+@utility neon-border-lime {
+  @apply border border-neon-lime shadow-neon-lime;
+}
+
+@utility text-glitch {
+  @apply text-neon-magenta font-bold;
+  text-shadow: 2px 0 #00f7ff;
+}
+
+@utility bg-dark-panel {
+  @apply bg-shadow-dark border border-street-gray rounded;
+}
+
+@utility input-field {
+  @apply bg-shadow-dark border border-street-gray text-corp-white placeholder-street-gray rounded px-3 py-2;
+  @apply focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan;
+}
+
+@media print {
+  .sidebar {
+    display: none;
+  }
+  
+  .spell-detail {
+    max-width: 100%;
+    page-break-inside: avoid;
+  }
+}

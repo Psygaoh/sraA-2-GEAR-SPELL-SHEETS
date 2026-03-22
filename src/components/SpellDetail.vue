@@ -1,0 +1,193 @@
+<template>
+  <div class="spell-detail flex-1 flex flex-col bg-shadow-black overflow-hidden">
+    <!-- Header -->
+    <div v-if="spellStore.currentSpell" class="spell-header bg-gradient-to-r from-shadow-dark to-shadow-black border-b border-neon-cyan p-6">
+      <div class="flex items-start gap-6">
+        <!-- Icon placeholder -->
+        <div class="spell-icon bg-shadow-dark border-2 border-neon-cyan rounded flex items-center justify-center flex-shrink-0">
+          <span class="text-4xl">📖</span>
+        </div>
+        
+        <!-- Title section -->
+        <div class="flex-1">
+          <h1 class="text-3xl font-bold text-neon-cyan mb-2 text-glitch">
+            {{ spellStore.currentSpell.nom }}
+          </h1>
+          <div class="flex flex-wrap gap-4 text-sm">
+            <div class="badge">
+              <span class="label">Type:</span>
+              <span class="value text-neon-magenta">{{ spellStore.currentSpell.type }}</span>
+            </div>
+            <div class="badge">
+              <span class="label">Category:</span>
+              <span class="value text-neon-lime">{{ spellStore.currentSpell.categorie }}</span>
+            </div>
+            <div v-if="spellStore.currentSpell.niveau" class="badge">
+              <span class="label">Level:</span>
+              <span class="value">{{ spellStore.currentSpell.niveau }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div v-if="spellStore.currentSpell" class="spell-content flex-1 overflow-y-auto p-6">
+      <div class="space-y-6">
+        <!-- Threshold/Seuil -->
+        <div class="field">
+          <h2 class="field-label text-neon-magenta">Seuil / Réserve Opposée</h2>
+          <p class="field-value">{{ spellStore.currentSpell.seuil }}</p>
+        </div>
+
+        <!-- Effect -->
+        <div class="field">
+          <h2 class="field-label text-neon-lime">Effet</h2>
+          <p class="field-value">{{ spellStore.currentSpell.effet }}</p>
+        </div>
+
+        <!-- Duration -->
+        <div v-if="spellStore.currentSpell.duree" class="field">
+          <h2 class="field-label text-neon-cyan">Durée</h2>
+          <p class="field-value">{{ spellStore.currentSpell.duree }}</p>
+        </div>
+
+        <!-- Distance -->
+        <div v-if="spellStore.currentSpell.distance" class="field">
+          <h2 class="field-label text-neon-cyan">Distance</h2>
+          <p class="field-value">{{ spellStore.currentSpell.distance }}</p>
+        </div>
+
+        <!-- Notes -->
+        <div v-if="spellStore.currentSpell.notes" class="field bg-shadow-dark border border-street-gray rounded p-4">
+          <h2 class="field-label text-neon-magenta mb-2">Notes</h2>
+          <p class="field-value text-sm leading-relaxed">{{ spellStore.currentSpell.notes }}</p>
+        </div>
+
+        <!-- Tags -->
+        <div v-if="spellStore.currentSpell.tags && spellStore.currentSpell.tags.length > 0" class="field">
+          <h2 class="field-label text-street-gray mb-2">Tags</h2>
+          <div class="flex flex-wrap gap-2">
+            <span v-for="tag in spellStore.currentSpell.tags" :key="tag" class="tag">
+              {{ tag }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Empty state -->
+    <div v-else class="flex items-center justify-center flex-1 text-street-gray">
+      <div class="text-center">
+        <p class="text-xl mb-2">No spell selected</p>
+        <p class="text-sm">Use the list on the left to select a spell</p>
+      </div>
+    </div>
+
+    <!-- Footer info -->
+    <div class="spell-footer bg-shadow-dark border-t border-street-gray px-6 py-3 text-xs text-street-gray">
+      <p>Press / to search • Arrow keys to navigate • Ctrl+P to print • Esc to clear</p>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { spellStore } from '@/stores/spellStore'
+</script>
+
+<style scoped>
+.spell-detail {
+  background: linear-gradient(135deg, rgb(10, 14, 39) 0%, rgb(26, 31, 58) 100%);
+}
+
+.spell-header {
+  box-shadow: 0 0 20px rgba(0, 247, 255, 0.1);
+}
+
+.spell-icon {
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 0 15px rgba(0, 247, 255, 0.3);
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background-color: rgba(61, 70, 86, 0.3);
+  border: 1px solid rgba(61, 70, 86, 0.5);
+  border-radius: 4px;
+}
+
+.label {
+  color: rgb(150, 155, 170);
+  font-weight: 600;
+}
+
+.value {
+  font-weight: 500;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field-label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.field-value {
+  color: rgb(232, 232, 232);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: rgba(0, 247, 255, 0.1);
+  border: 1px solid rgb(0, 247, 255);
+  border-radius: 12px;
+  font-size: 0.75rem;
+  color: rgb(0, 247, 255);
+}
+
+.spell-footer {
+  flex-shrink: 0;
+}
+
+/* Print styles */
+@media print {
+  .spell-header {
+    page-break-after: avoid;
+  }
+
+  .spell-detail {
+    padding: 0;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .spell-content {
+    overflow: visible;
+    page-break-inside: avoid;
+  }
+
+  .spell-footer {
+    display: none;
+  }
+
+  .spell-detail::after {
+    content: '';
+    display: block;
+    page-break-after: always;
+    height: 1px;
+  }
+}
+</style>

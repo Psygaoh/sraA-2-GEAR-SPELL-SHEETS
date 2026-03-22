@@ -1,0 +1,17 @@
+{
+  "spells": [
+    {
+      "id": "eclairManaEtourdissant",
+      "nom": "Éclair mana / étourdissant",
+      "type": "Combat (direct, I)",
+      "seuil": "Selon aire d'effet",
+      "effet": "Inflige des dommages létaux et Éclair étourdissant des dommages étourdissants",
+      "notes": "Si l'attaque est réussie, les dommages sont appliqués : VD (Succès nets) dommages létaux et Éclair étourdissant des dommages étourdissants",
+      "categorie": "combat",
+      "tags": ["direct", "damage", "stun"],
+      "niveau": 1,
+      "duree": "Instantané",
+      "distance": "Ligne de vue"
+    }
+  ]
+}
